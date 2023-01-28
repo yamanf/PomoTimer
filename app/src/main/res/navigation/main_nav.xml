@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/focusFragment">
+
+    <fragment
+        android:id="@+id/focusFragment"
+        android:name="com.yamanf.pomotimer.ui.FocusFragment"
+        android:label="fragment_focus"
+        tools:layout="@layout/fragment_focus" >
+        <action
+            android:id="@+id/action_focusFragment_to_breakFragment"
+            app:destination="@id/breakFragment" />
+        <action
+            android:id="@+id/action_focusFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breakFragment"
+        android:name="com.yamanf.pomotimer.ui.BreakFragment"
+        android:label="fragment_break"
+        tools:layout="@layout/fragment_break" >
+        <action
+            android:id="@+id/action_breakFragment_to_focusFragment"
+            app:destination="@id/focusFragment" />
+        <action
+            android:id="@+id/action_breakFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.yamanf.pomotimer.ui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_focusFragment"
+            app:destination="@id/focusFragment" />
+    </fragment>
+</navigation>
